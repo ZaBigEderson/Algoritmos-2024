@@ -13,6 +13,11 @@
 
         label {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: black;
+        }
+
+        body {
+            background-color: white;
         }
     </style>
 
@@ -36,14 +41,66 @@
     <label for="parcelado_em_tres">Pagar parcelado em três vezes</label>
     <button onclick="escolha ('4')">Selecionar forma de pagamento em três vezes</button>
     <br><br><br><br>
-    
+    <label for="resposta">Resposta</label>
+    <span id="resposta"></span><br><br>
+    <label for="resposta2">Resposta2</label>
+    <span id="resposta2"></span><br><br>
+    <label for="resposta3">Resposta3</label>
+    <span id="resposta3"></span><br><br>
+    <label for="resposta4">Resposta4</label>
+    <span id="resposta4"></span><br><br>
 
 
   
     <script>
-        
+        function escolha(e){
+            let valor = 70.0;
+            let resp;
+            if (e==1) {
+                resp = valor - 15/100 * valor;
+            } else {
                 
-            
+            }
+
+            document.getElementById("resposta").textContent = resp;
+        }
+
+        function escolha(i){
+            let valor2 = 70.0;
+            let resp2;
+            if (i==2) {
+                resp2 = valor2 - 15/100 * valor2;
+            } else {
+                
+            }
+
+            document.getElementById("resposta2").textContent = resp2;
+        }
+
+        function escolha(a){
+            let valor3 = 70.0;
+            let resp3;
+            if (a==3) {
+                resp3 = valor3;
+            } else {
+                
+            }
+
+            document.getElementById("resposta3").textContent = resp3;
+        }
+
+        function escolha(u){
+            let valor4 = 70.0;
+            let resp4;
+            if (u==4) {
+                resp4 = valor4 + 5/100 * valor4;
+            } else {
+                
+            }
+
+            document.getElementById("resposta4").textContent = resp4;
+        }
+
 
 
     </script>
