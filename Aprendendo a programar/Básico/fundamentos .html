@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags Bottom, Label e Input</title>
+</head>
+<body>
+<!-- A tag label é responsável por associar um rótulo a um elemento de formulário, como <input>, <select>, ou <textarea>.
+     Esses rótulos ajudam os usuários a entender o propósito de um campo de entrada em um formulário.-->
+    <label for="inputbase">Base</label>
+<!--A tag <input> é uma das tags mais importantes em HTML e é usada para criar campos de entrada em formulários web.
+     Esses campos de entrada podem ser de diferentes tipos, como texto, senha, checkbox, radio, etc.-->
+    <input type="number" id="inputbase" name="inputbase">
+    <br><br>
+    <label for="inputaltura">Altura</label>    
+    <input type="number" id="inputaltura" name="inputaltura">
+    <br><br>
+    <input type="button" value="calcular" onclick="calculararea()">
+    <br><br>
+    <label for="arearesp">Área</label>
+    <span id="arearesp">0,0</span>
+
+
+    <script>
+        function calculararea(){
+            let base = parseFloat(document.getElementById("inputbase").value);
+            let altura = parseFloat(document.getElementById("inputaltura").value);
+            let area = base*altura;
+            document.getElementById("arearesp").textContent = area;
+        }
+    </script>
+</body>
+</html>
