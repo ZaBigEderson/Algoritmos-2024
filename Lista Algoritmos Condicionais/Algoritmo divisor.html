@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão</title>
+    <style>
+         .error{
+            color: red;
+         }
+
+
+    </style>
+</head>
+<body>
+    <label for="inputdividendo">Insira o dividendo</label>
+    <input type="number" id="inputdividendo" name="inputdividendo"><br>
+    <label for="inputdivisor">Insira o divisor</label>
+    <input type="number" id="inputdivisor" name="inputdivisor"><br>
+
+    <input type="button" value="Realizar Cálculo" onclick="divisao()"><br>
+
+    <label for="resultado">Resultado da divisão</label>
+    <span id="resultado">0</span>
+
+
+    <script>
+        function divisao(){
+            let divisor = parseInt(document.getElementById("inputdivisor").value);
+            let dividendo = parseInt(document.getElementById("inputdividendo").value)
+            let resto 
+            let resp 
+            if (divisor != 0){
+                resp = (dividendo/divisor).toFixed(2)
+                document.getElementById('resultado').textContent = resp
+            }else{
+                document.getElementById('resultado').innerHTML = '<p class="error">Não se pode dividir por zero!</p>';
+            }
+
+        }
+    </script>
+
+
+
+
+
+
+</body>
+</html>
