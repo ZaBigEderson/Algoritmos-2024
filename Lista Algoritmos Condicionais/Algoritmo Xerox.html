@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço impressão Xerox</title>
+</head>
+<body>
+    <label for="copias">Quantidade de cópias</label><br>
+    <input type="number" id="copias" name="copias"><br>
+    <input type="button" value="Calcular preço" onclick="xerox()"><br>
+    <label for="preco">Preço Final:</label><br>
+    <span id="preco">0,00</span>
+
+    <script>
+        function xerox(){
+            let copiaqnt = parseInt(document.getElementById("copias").value);
+            let resp
+            if (copiaqnt > 100) {
+                resp = (copiaqnt * 0.20).toFixed(2);
+            } else {
+                resp = (copiaqnt * 0.25).toFixed(2);
+            }
+            document.getElementById("preco").textContent = resp;
+        }
+
+    </script>
+</body>
+</html>

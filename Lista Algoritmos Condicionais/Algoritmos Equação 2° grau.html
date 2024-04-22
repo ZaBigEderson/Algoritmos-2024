@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação de segundo Grau</title>
+</head>
+<body>
+    <!--Valor de A-->
+    <label for="inputA">Insira aqui o valor de A</label>
+    <input type="number" id="inputA" name="inputA">
+
+    <!--Valor de B-->
+    <label for="inputB">Insira aqui o valor de B</label>
+    <input type="number" id="inputB" name="inputB/">
+
+    <!--Valor de C-->
+    <label for="inputC">Insira aqui o valor de C</label>
+    <input type="number" id="inputC" name="inputC/"><br>
+
+    <input type="button" value="Fazer a equação" onclick="calculo()"><br>
+
+    <label for="resposta">Resposta Final</label>
+    <span id="resposta">0</span>
+
+    <script>
+        function calculo(){
+            let A = parseInt(document.getElementById("inputA").value);
+            let B = parseInt(document.getElementById("inputB").value);
+            let C = parseInt(document.getElementById("inputC").value);
+            let resp
+            let delta = b*b-4*a*c;
+            let raiz1, raiz2
+            if (discriminante > 0) {
+            raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+            raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+            raiz1 = raiz2 = -b / (2 * a);
+            } else if (discriminante === 0) {
+            } else {
+              document.getElementById('resultado').innerHTML = '<p class="error">As raízes são negativas.</p>';
+        return;
+    }
+
+
+    document.getElementById('resultado').innerHTML = '<p>Raiz 1: ' + raiz1 + '</p><p>Raiz 2: ' + raiz2 + '</p>';
+};
+        
+    </script>
+</body>
+</html>
