@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inputmes">Em Qual Mês deseja saber a quantidade de rosquinhas que Homer comeu (em números)?</label><br>
+    <input type="number" id="inputmes" name="inputmes"><br>
+    <label for="inputano">Em que ano desejaria saber?</label><br>
+    <input type="number" id="inputano" name="inputano"><br><br>
+
+    <input type="button" value="Calcular" onclick="calculo()"><br><br>
+
+    <label for="resposta">Quantia de rosquinhas comidas:</label><br>
+    <span id="resposta">?</span><br>
+
+    <script>
+        function calculo(){
+            let mes = parseInt(document.getElementById("inputmes").value);
+            let ano = parseInt(document.getElementById("inputano").value);
+            let rosquinhas
+            let totaldias
+            let diasimpares
+            let resp
+
+            if (mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12){
+                totaldias = 31; rosquinhas=8;
+            } else if (mes==2)
+                if(ano%4==0){
+                    totaldias=29; rosquinhas=9;
+                    }else  {
+                    totaldias = 28; rosquinhas=7;
+                    }  else {
+                    totaldias=30; rosquinhas=6;
+                    }
+                    diasimpares = Math.ceil(totaldias/2);
+                    resp = (diasimpares*rosquinhas);
+                    document.getElementById("resposta").textContent = resp
+
+            }
+        
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
